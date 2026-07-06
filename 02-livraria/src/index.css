@@ -1,0 +1,23 @@
+:root {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f1812;
+  background: #faf7f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #c95820;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}

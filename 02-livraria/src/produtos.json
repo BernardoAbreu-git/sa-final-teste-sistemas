@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nome": "Dom Casmurro",
+    "preco": 39.9,
+    "nota": 5,
+    "categoria": "Clássicos",
+    "emEstoque": true,
+    "imagens": ["Capa de Dom Casmurro", "Contracapa do livro"],
+    "descricao": "Romance de Machado de Assis sobre ciúme e memória.",
+    "avaliacoes": "Nota média dos leitores: 5 de 5 estrelas."
+  },
+  {
+    "id": 2,
+    "nome": "O Cortiço",
+    "preco": 34.5,
+    "nota": 4,
+    "categoria": "Clássicos",
+    "emEstoque": true,
+    "imagens": ["Capa de O Cortiço", "Contracapa do livro"],
+    "descricao": "Clássico de Aluísio Azevedo sobre a vida em um cortiço.",
+    "avaliacoes": "Nota média dos leitores: 4 de 5 estrelas."
+  },
+  {
+    "id": 3,
+    "nome": "Guia de JavaScript",
+    "preco": 89.0,
+    "nota": 5,
+    "categoria": "Técnicos",
+    "emEstoque": true,
+    "imagens": ["Capa do guia", "Sumário do livro"],
+    "descricao": "Manual prático de JavaScript para iniciantes.",
+    "avaliacoes": "Nota média dos leitores: 5 de 5 estrelas."
+  },
+  {
+    "id": 4,
+    "nome": "Contos de Terror",
+    "preco": 29.9,
+    "nota": 3,
+    "categoria": "Suspense",
+    "emEstoque": false,
+    "imagens": ["Capa dos contos", "Ilustração interna"],
+    "descricao": "Coletânea de contos de suspense e terror.",
+    "avaliacoes": "Nota média dos leitores: 3 de 5 estrelas."
+  },
+  {
+    "id": 5,
+    "nome": "Aventuras no Espaço",
+    "preco": 59.9,
+    "nota": 4,
+    "categoria": "Infantil",
+    "emEstoque": true,
+    "imagens": ["Capa ilustrada", "Página colorida"],
+    "descricao": "História infantil sobre uma viagem espacial.",
+    "avaliacoes": "Nota média dos leitores: 4 de 5 estrelas."
+  },
+  {
+    "id": 6,
+    "nome": "Atlas do Mundo",
+    "preco": 120.0,
+    "nota": 4,
+    "categoria": "Referência",
+    "emEstoque": false,
+    "imagens": ["Capa do atlas", "Mapa interno"],
+    "descricao": "Atlas geográfico com mapas de todos os continentes.",
+    "avaliacoes": "Nota média dos leitores: 4 de 5 estrelas."
+  }
+]
