@@ -9,11 +9,11 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Cabecalho } from "./components/Cabecalho";
 import { Rodape } from "./components/Rodape";
-import HomePage from "./HomePage";
-import ProdutoPage from "./components/ProdutoPage";
-import CarrinhoPage from "./components/CarrinhoPage";
-import ContatoPage from "./components/ContatoPage";
-import NaoEncontradaPage from "./components/NaoEncontradaPage";
+import HomePage from "./pages/HomePage";
+import ProdutoPage from "./pages/ProdutoPage";
+import CarrinhoPage from "./pages/CarrinhoPage";
+import ContatoPage from "./pages/ContatoPage";
+import NaoEncontradaPage from "./pages/NaoEncontradaPage";
 import "./App.css";
 
 export default function App() {

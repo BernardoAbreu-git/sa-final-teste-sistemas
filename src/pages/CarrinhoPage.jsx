@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { PrecoEtiqueta } from "./PrecoEtiqueta";
-import { SeletorQuantidade } from "./SeletorQuantidade";
+import { PrecoEtiqueta } from "../components/PrecoEtiqueta";
+import { SeletorQuantidade } from "../components/SeletorQuantidade";
 
 // CarrinhoPage — lista os itens que o usuário adicionou ao carrinho.
 // Props: itens (array) — recebido do App (o estado do carrinho vive lá, sem Context API).

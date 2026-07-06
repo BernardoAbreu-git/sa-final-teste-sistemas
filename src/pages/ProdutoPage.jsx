@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { carregarProdutos } from "../hooks/api";
-import { Breadcrumb } from "./Breadcrumb";
-import { GaleriaImagens } from "./GaleriaImagens";
-import { PrecoEtiqueta } from "./PrecoEtiqueta";
-import { Avaliacao } from "./Avaliacao";
-import { BadgeEstoque } from "./BadgeEstoque";
-import { SeletorQuantidade } from "./SeletorQuantidade";
-import { ToggleFavorito } from "./ToggleFavorito";
-import { BotaoAdicionarCarrinho } from "./BotaoAdicionarCarrinho";
-import { Abas } from "./Abas";
-import { Acordeao } from "./Acordeao";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { GaleriaImagens } from "../components/GaleriaImagens";
+import { PrecoEtiqueta } from "../components/PrecoEtiqueta";
+import { Avaliacao } from "../components/Avaliacao";
+import { BadgeEstoque } from "../components/BadgeEstoque";
+import { SeletorQuantidade } from "../components/SeletorQuantidade";
+import { ToggleFavorito } from "../components/ToggleFavorito";
+import { BotaoAdicionarCarrinho } from "../components/BotaoAdicionarCarrinho";
+import { Abas } from "../components/Abas";
+import { Acordeao } from "../components/Acordeao";
 
 // ProdutoPage — detalhe de um produto. Lê o :id da rota (useParams), consome o
 // JSON e mostra galeria, preço, avaliação, seletor de quantidade e abas.

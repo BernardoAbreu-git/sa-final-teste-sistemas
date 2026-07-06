@@ -1,4 +1,4 @@
-import { FormularioNewsletter } from "./FormularioNewsletter";
+import { FormularioNewsletter } from "../components/FormularioNewsletter";
 
 // ContatoPage — página de contato com inscrição na newsletter.
 // Sem props.
