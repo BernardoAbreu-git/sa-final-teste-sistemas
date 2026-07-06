@@ -7,7 +7,10 @@ export function FormularioNewsletter({ onInscrever }) {
 
   function enviar(evento) {
     evento.preventDefault();
-    onInscrever(email);
+    if (email.trim()) {
+      onInscrever?.(email);
+      setEmail("");
+    }
   }
 
   return (

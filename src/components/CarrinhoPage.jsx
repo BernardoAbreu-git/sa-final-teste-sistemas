@@ -5,7 +5,10 @@ import { SeletorQuantidade } from "./SeletorQuantidade";
 // CarrinhoPage — lista os itens que o usuário adicionou ao carrinho.
 // Props: itens (array) — recebido do App (o estado do carrinho vive lá, sem Context API).
 export default function CarrinhoPage({ itens }) {
-  const total = itens.reduce((soma, item) => soma + item.preco, 0);
+  const total = itens.reduce(
+    (soma, item) => soma + item.preco * (item.quantidade || 1),
+    0
+  );
 
   if (itens.length === 0) {
     return (
@@ -22,7 +25,7 @@ export default function CarrinhoPage({ itens }) {
       <h2>Seu carrinho</h2>
       <ul>
         {itens.map((item, i) => (
-          <li key={i}>
+          <li key={item.id || `${item.nome}-${i}`}>
             {item.nome} <PrecoEtiqueta valor={item.preco} />
             <SeletorQuantidade />
           </li>

@@ -7,7 +7,10 @@ export function BarraBusca({ onBuscar }) {
 
   function enviar(evento) {
     evento.preventDefault();
-    onBuscar(texto);
+    if (texto.trim()) {
+      onBuscar?.(texto);
+      setTexto("");
+    }
   }
 
   return (
