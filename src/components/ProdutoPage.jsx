@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { carregarProdutos } from "./api";
+import { carregarProdutos } from "../hooks/api";
 import { Breadcrumb } from "./Breadcrumb";
 import { GaleriaImagens } from "./GaleriaImagens";
 import { PrecoEtiqueta } from "./PrecoEtiqueta";

@@ -6,6 +6,14 @@
 // Enquanto o App não "enxergar" o React Router, o Cabecalho, o Rodape e as páginas,
 // a loja não monta. Repare em COMO cada arquivo exporta o que oferece.
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Cabecalho } from "./components/Cabecalho";
+import { Rodape } from "./components/Rodape";
+import HomePage from "./HomePage";
+import ProdutoPage from "./components/ProdutoPage";
+import CarrinhoPage from "./components/CarrinhoPage";
+import ContatoPage from "./components/ContatoPage";
+import NaoEncontradaPage from "./components/NaoEncontradaPage";
 import "./App.css";
 
 export default function App() {
