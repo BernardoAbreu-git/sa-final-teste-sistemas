@@ -1,0 +1,422 @@
+<style>/*responsive-fix-v2*/
+*{box-sizing:border-box;min-width:0}
+table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+pre{max-width:100%;overflow-x:auto}
+img,svg,video{max-width:100%;height:auto}
+@media(max-width:560px){
+  body{font-size:15px;overflow-wrap:anywhere}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
+  .g2{grid-template-columns:1fr !important}
+  h1{font-size:32px !important;line-height:1.12 !important}
+  .tree{font-size:10px !important;padding:14px 12px !important}
+  td{overflow-wrap:normal;word-break:normal}
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Lexend:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<div style="font-family: 'Lexend', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f1ebd9; color: #322920; max-width: 920px; margin: 0 auto; padding: 40px 24px 64px; font-size: 17px; line-height: 1.7; letter-spacing: 0; overflow-x: hidden;">
+
+  <!-- HEADER CARD -->
+  <div style="background: linear-gradient(160deg, #3b2a1c 0%, #2a1f15 60%, #221a12 100%); border-radius: 14px; box-shadow: 0 8px 32px rgba(40,16,4,0.18); padding: 44px 48px 40px; margin-bottom: 22px;">
+    <div style="font-family: 'Lexend', 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #e6b988;">
+      <span style="display: inline-block; width: 6px; height: 6px; background: #c95820; border-radius: 50%; vertical-align: middle; margin-right: 10px;">&nbsp;</span>Teste de Sistemas · S.A. Final em grupo
+    </div>
+    <h1 style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-weight: 500; font-size: 50px; line-height: 1.05; letter-spacing: -0.02em; color: #faf3e6; margin: 14px 0 22px;">
+      A livraria — <em style="font-style: italic; color: #e58148;">organizar, ligar as rotas e testar</em>
+    </h1>
+    <p style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.5; letter-spacing: -0.005em; color: #d9cdb6; margin: 0 0 26px; max-width: 64ch;">
+      Vocês — um grupo de <strong style="color: #f0e4cf; font-weight: 500;">3 pessoas</strong> — recebem o código de uma livraria em React: <strong style="color: #f0e4cf; font-weight: 500;">25 componentes e 5 páginas que funcionam</strong>, mas o projeto chegou <strong style="color: #f0e4cf; font-weight: 500;">desorganizado, sem as rotas ligadas e sem nenhum teste</strong>. O trabalho segue quatro etapas, nesta ordem:
+    </p>
+    <div style="display: grid; grid-template-columns: 34px 1fr; gap: 6px 16px; margin: 0 0 22px;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.35; color: #e58148; text-align: right;">1</div>
+      <div style="font-size: 15px; line-height: 1.55; color: #d9cdb6; padding-top: 3px;"><strong style="color: #f0e4cf; font-weight: 500;">Rodar e diagnosticar</strong> — instalar, tentar rodar e entender o que está errado.</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.35; color: #e58148; text-align: right;">2</div>
+      <div style="font-size: 15px; line-height: 1.55; color: #d9cdb6; padding-top: 3px;"><strong style="color: #f0e4cf; font-weight: 500;">Fazer a loja montar</strong> — completar os <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #e6dfce;">import</span> do <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #e6dfce;">App.jsx</span> e ligar as rotas.</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.35; color: #e58148; text-align: right;">3</div>
+      <div style="font-size: 15px; line-height: 1.55; color: #d9cdb6; padding-top: 3px;"><strong style="color: #f0e4cf; font-weight: 500;">Organizar as pastas</strong> — <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #e6dfce;">src/components/</span> e <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #e6dfce;">src/pages/</span>, com os imports consertados.</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.35; color: #e58148; text-align: right;">4</div>
+      <div style="font-size: 15px; line-height: 1.55; color: #d9cdb6; padding-top: 3px;"><strong style="color: #f0e4cf; font-weight: 500;">Proteger com testes</strong> — um <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #e6dfce;">.test.jsx</span> para cada um dos 25 componentes, dividido entre os 3.</div>
+    </div>
+    <p style="margin: 0; font-family: 'Lexend', sans-serif; font-size: 13.5px; line-height: 1.6; color: #b8ab93;">
+      Entrega final: <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #e6dfce;">npm run dev</span> mostrando a loja + <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #e6dfce;">npm test</span> com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #7fd99a;">Test Suites: 25 passed</span>.
+    </p>
+  </div>
+
+  <!-- ============ SEÇÃO 1 · O QUE VOCÊS RECEBERAM ============ -->
+  <div style="display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: baseline; margin: 40px 6px 18px; padding-bottom: 14px; border-bottom: 2px solid #d9a066;">
+    <div style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-style: italic; font-weight: 400; font-size: 46px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">1</div>
+    <h2 style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.12; letter-spacing: -0.02em; color: #1f1812; margin: 0;">O que vocês receberam</h2>
+  </div>
+
+  <!-- CENARIO CARD -->
+  <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 36px 44px; margin-bottom: 22px;">
+    <h3 style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1.5px solid #ebe4d2;">O cenário</h3>
+    <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Uma equipe entregou às pressas o front-end de uma <strong style="color: #1f1812;">livraria</strong> em React. O código funciona — cada componente e cada página fazem o que devem — mas o projeto chegou em mau estado: os <strong style="color: #1f1812;">30 arquivos estão soltos na raiz de <span style="font-family: 'JetBrains Mono', Consolas, monospace; background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 3px; padding: 1px 6px; font-size: 0.88em; color: #322920;">src/</span></strong>, o <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.88em; color: #322920;">App.jsx</span> está <strong style="color: #1f1812;">sem os imports</strong> (a loja nem monta) e <strong style="color: #1f1812;">não existe um teste sequer</strong>. Os produtos vêm de um arquivo JSON, servidos pela camada <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.88em; color: #322920;">src/api.js</span>.</p>
+    <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">O grupo de vocês assume esse projeto. Dois aliados: <strong style="color: #1f1812;">cada arquivo começa com um comentário</strong> dizendo o que o componente faz, quais <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.88em; color: #322920;">props</span> recebe e de que tipo de teste ele é — leiam sempre antes de mexer. E <strong style="color: #1f1812;">nada aqui exige ferramenta nova</strong>: tudo foi ensinado no conteúdo de React Testing Library. Mantenham o material aberto ao lado.</p>
+
+    <div style="background: #f9ead8; border-left: 4px solid #c95820; border-radius: 0 10px 10px 0; padding: 16px 22px; margin: 22px 0 0;">
+      <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 6px;">A regra deste projeto</div>
+      <p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; line-height: 1.45; color: #1f1812; max-width: 62ch;">Nos testes, encontre cada elemento do jeito que o usuário o percebe: pelo <strong style="color: #1f1812;">papel</strong> (<span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em; color: #c95820;">getByRole</span>), pelo <strong style="color: #1f1812;">texto</strong> (<span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em; color: #c95820;">getByText</span>), pela <strong style="color: #1f1812;">etiqueta do campo</strong> (<span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em; color: #c95820;">getByLabelText</span>) ou pela <strong style="color: #1f1812;">descrição da imagem</strong> (<span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em; color: #c95820;">getByAltText</span>) — e prove o comportamento agindo como um usuário agiria. Nunca procure por classe CSS nem por <span style="font-family: 'JetBrains Mono', Consolas, monospace; color: #c95820;">id</span>.</p>
+    </div>
+  </div>
+
+  <!-- ============ SEÇÃO 2 · O QUE VOCÊS ENTREGAM ============ -->
+  <div style="display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: baseline; margin: 40px 6px 18px; padding-bottom: 14px; border-bottom: 2px solid #d9a066;">
+    <div style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-style: italic; font-weight: 400; font-size: 46px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">2</div>
+    <h2 style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.12; letter-spacing: -0.02em; color: #1f1812; margin: 0;">O que vocês entregam</h2>
+  </div>
+
+  <div style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 32px 44px; margin-bottom: 22px;">
+    <p style="margin: 0 0 16px; color: #322920; line-height: 1.72;">A mesma livraria, em três condições:</p>
+    <ol style="margin: 0 0 16px; padding-left: 26px; color: #322920; line-height: 1.75;">
+      <li style="margin-bottom: 8px; color: #322920;"><strong style="color: #1f1812;">Montando</strong> — <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm run dev</span> abre a loja no navegador e as 5 rotas navegam.</li>
+      <li style="margin-bottom: 8px; color: #322920;"><strong style="color: #1f1812;">Organizada</strong> — componentes em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/components/</span>, páginas em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/pages/</span>, imports corrigidos.</li>
+      <li style="margin-bottom: 0; color: #322920;"><strong style="color: #1f1812;">Protegida</strong> — um teste automatizado para cada um dos 25 componentes, todos verdes no <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm test</span>.</li>
+    </ol>
+    <p style="margin: 0; font-size: 15.5px; color: #675c4d; line-height: 1.65;">São os três itens do checklist da seção 4. No caminho, vocês exercitam as duas capacidades da UC: preparar o ambiente de testes e registrar o resultado de cada teste.</p>
+  </div>
+
+  <!-- META CARD -->
+  <div style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 24px 28px 22px; margin-bottom: 22px; border-left: 4px solid #c95820;">
+    <div style="font-family: 'Lexend', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 18px;">Unidade curricular e capacidades</div>
+    <div class="g2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div>
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 6px;">Unidade curricular</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #1f1812;">Teste de Sistemas</div>
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin: 16px 0 6px;">Pré-requisitos</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 16px; line-height: 1.4; color: #322920;">React Testing Library (<span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">render</span>, <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">screen</span>, buscas <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">getByRole/getByText/getByLabelText/getByAltText</span>, <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">userEvent</span>, <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">jest.fn</span>) e noções de <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 0.85em;">import/export</span> e React Router.</div>
+      </div>
+      <div>
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 6px;">Capacidades-alvo</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #1f1812;">Organizar o ambiente para o desenvolvimento das rotinas de testes.<br>Empregar ferramenta de documentação de teste para registro do resultado obtido.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SEÇÃO 3 · ROTEIRO DE TRABALHO ============ -->
+  <div style="display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: baseline; margin: 40px 6px 18px; padding-bottom: 14px; border-bottom: 2px solid #d9a066;">
+    <div style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-style: italic; font-weight: 400; font-size: 46px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">3</div>
+    <h2 style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.12; letter-spacing: -0.02em; color: #1f1812; margin: 0;">Roteiro de trabalho</h2>
+  </div>
+
+  <div style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 24px 44px; margin-bottom: 22px;">
+    <p style="margin: 0; color: #322920; line-height: 1.72;">Quatro etapas, na ordem. As etapas <strong style="color: #1f1812;">1 a 3 o grupo faz junto</strong> — todos precisam entender a estrutura do projeto. A <strong style="color: #1f1812;">etapa 4 é dividida entre as 3 pessoas</strong>. Cada etapa termina com um <em>"deu certo se…"</em> — só avancem quando ele passar.</p>
+  </div>
+
+  <!-- ETAPA 1 -->
+  <section style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 0; margin-bottom: 22px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: baseline; padding: 32px 44px 20px; border-bottom: 1px solid #ebe4d2;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 64px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">
+        01<small style="display: block; font-family: 'Lexend', sans-serif; font-style: normal; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-top: 6px;">Juntos</small>
+      </div>
+      <h3 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; color: #1f1812; margin: 0;">
+        Rodem o projeto e diagnostiquem o problema
+      </h3>
+    </div>
+    <div style="padding: 28px 44px 36px;">
+      <p style="margin: 0 0 16px; color: #322920; line-height: 1.72;">Clonem o projeto do GitHub, entrem na pasta da versão do grupo e rodem, nesta ordem:</p>
+
+      <div style="display:flex; justify-content:space-between; align-items:baseline; font-size:10px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; background:#1b1610; color:#776b58; padding:11px 20px; border-radius:10px 10px 0 0; border:1px solid #2a2218; border-bottom:0; flex-wrap: wrap; row-gap: 2px;"><span style="color:#776b58; text-transform: none; letter-spacing: 0.05em;">terminal</span><span style="color:#e58148; font-weight:600;">bash</span></div>
+      <pre style="margin: 0 0 16px; background: #231d15; color: #e6dfce; border-radius: 0 0 10px 10px; padding: 20px 26px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; line-height: 1.85; overflow-x: auto; border: 1px solid #2a2218; white-space: pre;"><span style="color: #776b58;"># 0) baixa o projeto e entra na pasta da SUA versão</span>
+git clone https://github.com/jhonatanwll/sa-final-teste-sistemas.git
+cd sa-final-teste-sistemas/versoes/02-livraria
+
+<span style="color: #776b58;"># 1) instala React, Vite, React Router, Jest, RTL e o json-server</span>
+npm install
+
+<span style="color: #776b58;"># 2) (opcional) sobe a API de mentira que serve o db.json</span>
+npm run api      <span style="color: #776b58;"># http://localhost:3001/produtos</span>
+
+<span style="color: #776b58;"># 3) tenta subir a loja — repare no que acontece</span>
+npm run dev
+
+<span style="color: #776b58;"># 4) roda os testes — repare no que ele responde</span>
+npm test</pre>
+
+      <p style="margin: 0 0 14px; color: #322920; line-height: 1.72;">Vocês vão esbarrar em <strong style="color: #1f1812;">três problemas</strong>. Cada um é resolvido em uma etapa:</p>
+
+      <div style="display: grid; grid-template-columns: 24px 1fr; gap: 14px; margin: 0 0 12px; padding: 16px 20px; background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; font-size: 15.5px; line-height: 1.65; color: #322920;">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; color: #c95820; font-size: 22px; line-height: 1; text-align: right;">A</div>
+        <div><strong style="color: #1f1812;">A loja não monta.</strong> O <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">App.jsx</span> usa o React Router, o cabeçalho, o rodapé e as 5 páginas — mas não importa nada disso: faltam os <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">import</span> no topo do arquivo. <em style="color: #675c4d;">→ Etapa 2.</em></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 24px 1fr; gap: 14px; margin: 0 0 12px; padding: 16px 20px; background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; font-size: 15.5px; line-height: 1.65; color: #322920;">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; color: #c95820; font-size: 22px; line-height: 1; text-align: right;">B</div>
+        <div><strong style="color: #1f1812;">Tudo amontoado.</strong> Os 25 componentes e as 5 páginas estão soltos na raiz de <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/</span>, sem separação — difícil de achar, manter e testar. <em style="color: #675c4d;">→ Etapa 3.</em></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 24px 1fr; gap: 14px; margin: 0 0 16px; padding: 16px 20px; background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; font-size: 15.5px; line-height: 1.65; color: #322920;">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; color: #c95820; font-size: 22px; line-height: 1; text-align: right;">C</div>
+        <div><strong style="color: #1f1812;">Zero testes.</strong> Não há um único arquivo <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">.test.jsx</span> protegendo os componentes. <em style="color: #675c4d;">→ Etapa 4.</em></div>
+      </div>
+
+      <div style="background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 20px; margin: 0 0 16px;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 8px;">Deu certo se…</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #322920; max-width: 64ch;">…o grupo consegue abrir o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">App.jsx</span> e apontar, no código, por que a loja não monta.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 24px 1fr; gap: 14px; margin: 0; padding: 14px 18px; background: #f6efde; border-radius: 8px; border-left: 3px solid #e6b988; font-size: 15px; line-height: 1.6; color: #322920;">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; color: #c95820; font-size: 22px; line-height: 1; text-align: right; opacity: 0.85;">¶</div>
+        <div>A aplicação consome o JSON pela camada <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/api.js</span>: ela tenta a API (<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">json-server</span>) e, se não estiver no ar, usa o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/produtos.json</span> local — a loja monta com ou sem servidor. Precisa de <strong style="color: #1f1812;">Node 20+</strong>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPA 2 -->
+  <section style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 0; margin-bottom: 22px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: baseline; padding: 32px 44px 20px; border-bottom: 1px solid #ebe4d2;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 64px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">
+        02<small style="display: block; font-family: 'Lexend', sans-serif; font-style: normal; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-top: 6px;">Juntos</small>
+      </div>
+      <h3 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; color: #1f1812; margin: 0;">
+        Façam a loja montar
+      </h3>
+    </div>
+    <div style="padding: 28px 44px 36px;">
+      <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Completem os <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">import</span> que faltam no topo do <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">App.jsx</span>. O próprio arquivo mostra o que ele usa: o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">BrowserRouter</span>, <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Routes</span> e <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Route</span> (que vêm do <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">react-router-dom</span>), o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Cabecalho</span>, o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Rodape</span> e as 5 páginas.</p>
+
+      <div style="background: #f9ead8; border-left: 4px solid #c95820; border-radius: 0 10px 10px 0; padding: 14px 20px; margin: 0 0 18px;">
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #1f1812; max-width: 64ch;"><strong style="color: #1f1812;">Atenção ao tipo de export</strong> de cada arquivo antes de escrever o import: as páginas usam <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #1f1812;">export default</span> e os componentes usam <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #1f1812;">export</span> nomeado — o jeito de importar muda conforme isso (veja o glossário).</p>
+      </div>
+
+      <div style="background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 20px; margin: 0;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 8px;">Deu certo se…</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #322920; max-width: 64ch;">…<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm run dev</span> mostra a loja montada e as 5 rotas navegam: <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">/</span> (home), <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">/produto/:id</span>, <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">/carrinho</span>, <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">/contato</span> — e um endereço inventado cai na página "não encontrada" (rota <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">*</span>).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPA 3 -->
+  <section style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 0; margin-bottom: 22px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: baseline; padding: 32px 44px 20px; border-bottom: 1px solid #ebe4d2;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 64px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">
+        03<small style="display: block; font-family: 'Lexend', sans-serif; font-style: normal; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-top: 6px;">Juntos</small>
+      </div>
+      <h3 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; color: #1f1812; margin: 0;">
+        Organizem as pastas
+      </h3>
+    </div>
+    <div style="padding: 28px 44px 36px;">
+      <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Movam os <strong style="color: #1f1812;">25 componentes</strong> para <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/components/</span> e as <strong style="color: #1f1812;">5 páginas</strong> para <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/pages/</span> — o padrão que toda equipe React usa:</p>
+
+      <div class="g2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0 0 18px;">
+        <div>
+          <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 8px;">Como chegou</div>
+          <pre class="tree" style="margin: 0; background: #f3eee0; color: #322920; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 18px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12.5px; line-height: 1.8; overflow-x: auto; white-space: pre;">src/
+├─ App.jsx        <span style="color: #c95820;">← sem os imports</span>
+├─ api.js
+├─ produtos.json
+├─ Cabecalho.jsx
+├─ CardProduto.jsx
+├─ …               <span style="color: #675c4d;">(25 componentes)</span>
+├─ HomePage.jsx
+└─ …               <span style="color: #675c4d;">(5 páginas)</span></pre>
+        </div>
+        <div>
+          <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 8px;">Como entregar</div>
+          <pre class="tree" style="margin: 0; background: #f3eee0; color: #322920; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 18px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12.5px; line-height: 1.8; overflow-x: auto; white-space: pre;">src/
+├─ App.jsx        <span style="color: #3f7d54;">← imports certos</span>
+├─ api.js
+├─ produtos.json
+├─ components/
+│  ├─ Cabecalho.jsx
+│  ├─ Cabecalho.test.jsx  <span style="color: #675c4d;">← etapa 4</span>
+│  └─ …           <span style="color: #675c4d;">(os 25 + testes)</span>
+└─ pages/
+   ├─ HomePage.jsx
+   └─ …           <span style="color: #675c4d;">(as 5 páginas)</span></pre>
+        </div>
+      </div>
+
+      <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Mover quebra os caminhos relativos — <strong style="color: #1f1812;">consertem os <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #1f1812;">import</span></strong>: uma página em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">pages/</span> que usa um componente passa a importá-lo de <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">../components/</span>; o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">App.jsx</span> passa a buscar as páginas em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">./pages/</span>. E a regra de ouro: <strong style="color: #1f1812;">não mudem o que cada componente faz</strong> — mudem só onde ele mora e como é importado.</p>
+
+      <div style="background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 20px; margin: 0;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 8px;">Deu certo se…</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #322920; max-width: 64ch;">…a loja continua montando <em>exatamente igual</em> à etapa 2, agora com os 30 arquivos dentro de <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/components/</span> e <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/pages/</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPA 4 -->
+  <section style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 0; margin-bottom: 22px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: baseline; padding: 32px 44px 20px; border-bottom: 1px solid #ebe4d2;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 64px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">
+        04<small style="display: block; font-family: 'Lexend', sans-serif; font-style: normal; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-top: 6px;">Dividido</small>
+      </div>
+      <h3 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; color: #1f1812; margin: 0;">
+        Protejam os 25 componentes com testes
+      </h3>
+    </div>
+    <div style="padding: 28px 44px 36px;">
+      <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Para cada componente, criem um arquivo de teste <strong style="color: #1f1812;">ao lado dele</strong> (co-localizado): <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">CardProduto.jsx</span> ganha um <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">CardProduto.test.jsx</span> na mesma pasta. Todo componente cai em um de <strong style="color: #1f1812;">três tipos</strong> — o comentário no topo do arquivo diz qual — e <strong style="color: #1f1812;">o tipo diz o que o teste precisa provar</strong>:</p>
+
+      <div style="background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; padding: 18px 22px; margin: 0 0 14px;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 8px;">Tipo 1 · Só aparece na tela (13 componentes)</div>
+        <p style="margin: 0 0 8px; font-size: 15.5px; line-height: 1.7; color: #322920; max-width: 64ch;">Mostra conteúdo fixo ou vindo de <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">props</span>, sem interação. <strong style="color: #1f1812;">O teste prova que o conteúdo está na tela:</strong> <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">render</span> + uma busca (<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">getByText</span>, <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">getByRole</span>, <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">getByAltText</span> ou <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">getByLabelText</span>).</p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #675c4d;"><span style="font-family: 'JetBrains Mono', monospace;">Cabecalho · Rodape · Logo · SeloFreteGratis · PrecoEtiqueta · CardProduto · Avaliacao · TagCategoria · Breadcrumb · BadgeEstoque · BannerPromocional · SeloDesconto · IndicadorParcelas</span></p>
+      </div>
+
+      <div style="background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; padding: 18px 22px; margin: 0 0 14px;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 8px;">Tipo 2 · Reage ao usuário (7 componentes)</div>
+        <p style="margin: 0 0 8px; font-size: 15.5px; line-height: 1.7; color: #322920; max-width: 64ch;">Tem estado interno: a tela muda quando o usuário clica. <strong style="color: #1f1812;">O teste prova a mudança:</strong> renderiza, age com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">userEvent</span> (sempre com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">await</span>) e compara a tela antes e depois da ação.</p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #675c4d;"><span style="font-family: 'JetBrains Mono', monospace;">SeletorQuantidade · Acordeao · Abas · GaleriaImagens · ToggleFavorito · BotaoVerMais · MenuCompartilhar</span></p>
+      </div>
+
+      <div style="background: #f3eee0; border: 1px solid #ebe4d2; border-radius: 10px; padding: 18px 22px; margin: 0 0 18px;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin-bottom: 8px;">Tipo 3 · Avisa o componente pai (5 componentes)</div>
+        <p style="margin: 0 0 8px; font-size: 15.5px; line-height: 1.7; color: #322920; max-width: 64ch;">Recebe uma função por <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">prop</span> (callback) e a chama quando o usuário age. <strong style="color: #1f1812;">O teste prova o aviso:</strong> passa um espião (<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">jest.fn</span>) na prop, age com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">userEvent</span> e confirma a chamada com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">toHaveBeenCalledTimes</span> / <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">toHaveBeenCalledWith</span>.</p>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #675c4d;"><span style="font-family: 'JetBrains Mono', monospace;">BotaoAdicionarCarrinho · FormularioNewsletter · FiltroPreco · BarraBusca · EstrelasInterativas</span></p>
+      </div>
+
+      <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin: 0 0 10px;">Divisão entre as 3 pessoas — mix dos 3 tipos</div>
+      <table style="border-collapse: collapse; font-size: 14.5px; line-height: 1.6; margin: 0 0 8px;">
+        <tr>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #f6efde; color: #1f1812; font-weight: 600; white-space: nowrap;">Pessoa 1 · 9</td>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #fcfaf3; color: #322920;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #322920;">Cabecalho (1) · Rodape (1) · Logo (1) · SeloFreteGratis (1) · SeloDesconto (1) · SeletorQuantidade (2) · Acordeao (2) · BotaoVerMais (2) · BotaoAdicionarCarrinho (3)</span></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #f6efde; color: #1f1812; font-weight: 600; white-space: nowrap;">Pessoa 2 · 8</td>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #fcfaf3; color: #322920;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #322920;">PrecoEtiqueta (1) · CardProduto (1) · Avaliacao (1) · TagCategoria (1) · Abas (2) · GaleriaImagens (2) · MenuCompartilhar (2) · FormularioNewsletter (3)</span></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #f6efde; color: #1f1812; font-weight: 600; white-space: nowrap;">Pessoa 3 · 8</td>
+          <td style="padding: 10px 16px; border: 1px solid #ebe4d2; background: #fcfaf3; color: #322920;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #322920;">Breadcrumb (1) · BadgeEstoque (1) · BannerPromocional (1) · IndicadorParcelas (1) · ToggleFavorito (2) · FiltroPreco (3) · BarraBusca (3) · EstrelasInterativas (3)</span></td>
+        </tr>
+      </table>
+      <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.6; color: #675c4d;">Comecem cada lote pelos componentes de Tipo 1 (mais simples) e subam para os Tipos 2 e 3. Para rodar só o seu teste enquanto escreve: <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #322920;">npm test -- CardProduto</span> (ou <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.95em; color: #322920;">npm run test:watch</span>).</p>
+
+      <div style="background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; padding: 16px 20px; margin: 0 0 16px;">
+        <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 8px;">Deu certo se…</div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #322920; max-width: 64ch;">…há 20 arquivos <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Componente.test.jsx</span> co-localizados e <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm test</span> termina com <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">Test Suites: 25 passed</span>.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 24px 1fr; gap: 14px; margin: 0; padding: 14px 18px; background: #f6efde; border-radius: 8px; border-left: 3px solid #e6b988; font-size: 15px; line-height: 1.6; color: #322920;">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; color: #c95820; font-size: 22px; line-height: 1; text-align: right; opacity: 0.85;">¶</div>
+        <div>Dois componentes usam <span style="font-family: 'JetBrains Mono', monospace; background: #fcfaf3; padding: 0 4px; border-radius: 3px; color: #322920;">&lt;Link&gt;</span> do React Router (<span style="font-family: 'JetBrains Mono', monospace; color: #322920;">Cabecalho</span> e <span style="font-family: 'JetBrains Mono', monospace; color: #322920;">Breadcrumb</span>): no teste deles, envolvam o componente em <span style="font-family: 'JetBrains Mono', monospace; background: #fcfaf3; padding: 0 4px; border-radius: 3px; color: #322920;">&lt;MemoryRouter&gt;</span> na hora do <span style="font-family: 'JetBrains Mono', monospace; background: #fcfaf3; padding: 0 4px; border-radius: 3px; color: #322920;">render</span>. E a 1ª linha de todo teste é <span style="font-family: 'JetBrains Mono', monospace; background: #fcfaf3; padding: 0 4px; border-radius: 3px; color: #322920;">import '@testing-library/jest-dom'</span>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARIO -->
+  <div style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 36px 44px; margin-bottom: 22px;">
+    <h3 style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #675c4d; margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1.5px solid #ebe4d2;">Glossário</h3>
+    <div class="g2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">rota / React Router</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">O que decide qual página aparece conforme o endereço na barra do navegador.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">export default × export nomeado</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Default importa <em>sem</em> chaves: <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">import HomePage from "./HomePage"</span>. Nomeado importa <em>com</em> chaves: <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">import { Cabecalho } from "./Cabecalho"</span>. Errar as chaves é a causa clássica de componente <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">undefined</span>.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">co-localizado</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">O arquivo de teste fica na mesma pasta do componente que ele testa.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">props</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Informação (incluindo funções/callbacks) passada de um componente para outro.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">userEvent</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Simula o usuário de verdade no teste: clique, digitação, tecla. Toda ação dele pede <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">await</span>.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">MemoryRouter</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Um "router de mentira" para envolver, no teste, componentes que usam <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">&lt;Link&gt;</span>.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">json-server</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Ferramenta que serve o <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">db.json</span> como uma API de mentira em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">localhost</span>.</div>
+      </div>
+      <div style="background: #f6efde; border: 1px solid #e0c8a8; border-radius: 10px; padding: 14px 18px;">
+        <div style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; font-weight: 600; color: #c95820; margin-bottom: 4px;">jest.fn</div>
+        <div style="font-size: 14.5px; line-height: 1.55; color: #322920;">Cria uma função-espião que anota se foi chamada, quantas vezes e com quais valores.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SEÇÃO 4 · ANTES DE ENTREGAR ============ -->
+  <div style="display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: baseline; margin: 40px 6px 18px; padding-bottom: 14px; border-bottom: 2px solid #d9a066;">
+    <div style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-style: italic; font-weight: 400; font-size: 46px; line-height: 1; color: #c95820; letter-spacing: -0.03em;">4</div>
+    <h2 style="font-family: 'Newsreader', 'Source Serif Pro', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.12; letter-spacing: -0.02em; color: #1f1812; margin: 0;">Antes de entregar</h2>
+  </div>
+
+  <!-- CHECKLIST DE CONCLUSAO -->
+  <div style="background: #fcfaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(60,30,10,0.04), 0 6px 24px rgba(60,30,10,0.06); padding: 36px 44px; margin-bottom: 22px; border-top: 4px solid #c95820;">
+    <h3 style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin: 0 0 8px; padding-bottom: 14px; border-bottom: 1.5px solid #ebe4d2;">Checklist de conclusão</h3>
+    <p style="margin: 0 0 18px; color: #322920; line-height: 1.72;">Os mesmos três itens da seção 2 — confiram um a um antes de entregar:</p>
+
+    <div style="display: grid; grid-template-columns: 30px 1fr; gap: 18px; align-items: flex-start; padding: 16px 22px; background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; margin-bottom: 12px;">
+      <div style="width: 22px; height: 22px; border: 2px solid #c95820; border-radius: 5px; background: #fcfaf3; margin-top: 3px;">&nbsp;</div>
+      <div>
+        <h4 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 19px; line-height: 1.25; margin: 2px 0 6px; color: #1f1812;">1 · A loja monta e navega</h4>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #322920; max-width: 64ch;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm run dev</span> mostra a loja e as 5 rotas navegam sem erro no console.</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 30px 1fr; gap: 18px; align-items: flex-start; padding: 16px 22px; background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px; margin-bottom: 12px;">
+      <div style="width: 22px; height: 22px; border: 2px solid #c95820; border-radius: 5px; background: #fcfaf3; margin-top: 3px;">&nbsp;</div>
+      <div>
+        <h4 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 19px; line-height: 1.25; margin: 2px 0 6px; color: #1f1812;">2 · Projeto organizado</h4>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #322920; max-width: 64ch;">25 componentes em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/components/</span>, 5 páginas em <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">src/pages/</span>, imports apontando certo.</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 30px 1fr; gap: 18px; align-items: flex-start; padding: 16px 22px; background: #fcfaf3; border: 1px solid #ebe4d2; border-radius: 10px;">
+      <div style="width: 22px; height: 22px; border: 2px solid #c95820; border-radius: 5px; background: #fcfaf3; margin-top: 3px;">&nbsp;</div>
+      <div>
+        <h4 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 19px; line-height: 1.25; margin: 2px 0 6px; color: #1f1812;">3 · Tudo testado e verde</h4>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #322920; max-width: 64ch;">Cada componente tem seu <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">.test.jsx</span> co-localizado, e <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: #322920;">npm test</span> passa sem falhas.</p>
+      </div>
+    </div>
+
+    <div style="background: #f9ead8; border-left: 4px solid #c95820; border-radius: 0 10px 10px 0; padding: 16px 22px; margin: 22px 0 0;">
+      <div style="font-family: 'Lexend', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #c95820; margin-bottom: 6px;">Selo de conclusão</div>
+      <p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; line-height: 1.45; color: #1f1812; max-width: 62ch;">Se o terminal mostrar <span style="font-family: 'JetBrains Mono', Consolas, monospace; color: #c95820;">Test Suites: 25 passed</span> e a loja navegar no navegador, a casa está arrumada e protegida — vocês concluíram a S.A.</p>
+    </div>
+  </div>
+
+  <!-- COLOPHON -->
+  <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 18px 28px; font-family: 'Lexend', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #675c4d;">
+    <span style="color: #675c4d;">Teste de Sistemas · S.A. Final</span>
+    <span style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 16px; letter-spacing: 0; text-transform: none; color: #c95820; font-weight: 500;">livraria</span>
+    <span style="color: #675c4d;">React Router · RTL</span>
+  </div>
+
+</div>
+<script>/* copy-code-button v1 */
+(function () {
+  function init() {
+    var DONE = 'data-copybtn';
+    document.querySelectorAll('pre:not([' + DONE + '])').forEach(function (pre) {
+      var bg = getComputedStyle(pre).backgroundColor;
+      var m = bg && bg.match(/\d+/g);
+      if (m) { var lum = (0.299*+m[0] + 0.587*+m[1] + 0.114*+m[2]) / 255; if (lum > 0.5) return; }
+      pre.setAttribute(DONE, '1');
+      var wrap = document.createElement('div');
+      wrap.style.position = 'relative';
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = 'Copiar';
+      btn.setAttribute('aria-label', 'Copiar código deste bloco');
+      btn.setAttribute('style', 'position:absolute;top:8px;right:8px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;color:#e6dfce;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:4px 11px;border-radius:7px;cursor:pointer;opacity:.55;transition:opacity .15s,background .15s,color .15s;z-index:2;');
+      wrap.addEventListener('mouseenter', function () { btn.style.opacity = '1'; });
+      wrap.addEventListener('mouseleave', function () { if (btn.textContent === 'Copiar') btn.style.opacity = '.55'; });
+      btn.addEventListener('click', function () {
+        var text = pre.innerText;
+        var ok = function () { btn.textContent = 'Copiado!'; btn.style.color = '#7fd99a'; btn.style.borderColor = '#3f7d54'; btn.style.opacity = '1'; setTimeout(function () { btn.textContent = 'Copiar'; btn.style.color = '#e6dfce'; btn.style.borderColor = 'rgba(255,255,255,.25)'; btn.style.opacity = '.55'; }, 1600); };
+        var bad = function () { btn.textContent = 'Erro'; setTimeout(function () { btn.textContent = 'Copiar'; }, 1600); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok).catch(bad); }
+        else { try { var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly',''); ta.style.position = 'fixed'; ta.style.left = '-9999px'; document.body.appendChild(ta); ta.select(); var r = document.execCommand('copy'); document.body.removeChild(ta); r ? ok() : bad(); } catch (e) { bad(); } }
+      });
+      wrap.appendChild(btn);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>

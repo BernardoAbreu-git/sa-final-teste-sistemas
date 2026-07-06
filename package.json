@@ -1,0 +1,33 @@
+{
+  "name": "livraria-pagina-viva-sa-final",
+  "version": "1.0.0",
+  "description": "S.A. Final (grupo) - Livraria Página Viva: Refatoracao + React Router + Testes (RTL). UC Teste de Sistemas (DESI).",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "api": "json-server --watch db.json --port 3001",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "@babel/preset-react": "7.25.9",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.1.0",
+    "@testing-library/user-event": "14.5.2",
+    "@vitejs/plugin-react": "4.3.1",
+    "babel-jest": "29.7.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "json-server": "0.17.4",
+    "vite": "5.4.8"
+  }
+}
