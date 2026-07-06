@@ -6,10 +6,11 @@ export function SeletorQuantidade() {
   const [quantidade, setQuantidade] = useState(1);
 
   function aumentar() {
-    setQuantidade(quantidade + 1);
+    setQuantidade((q) => q + 1);
   }
+
   function diminuir() {
-    if (quantidade > 1) setQuantidade(quantidade - 1);
+    setQuantidade((q) => (q > 1 ? q - 1 : q));
   }
 
   return (

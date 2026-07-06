@@ -18,14 +18,18 @@ import { Acordeao } from "../components/Acordeao";
 export default function ProdutoPage({ aoAdicionar }) {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
+  const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    carregarProdutos().then((lista) =>
-      setProduto(lista.find((p) => String(p.id) === id))
-    );
+    setCarregando(true);
+    carregarProdutos().then((lista) => {
+      setProduto(lista.find((p) => String(p.id) === id));
+      setCarregando(false);
+    });
   }, [id]);
 
-  if (!produto) return <p>Carregando produto...</p>;
+  if (carregando) return <p>Carregando produto...</p>;
+  if (!produto) return <p>Produto não encontrado.</p>;
 
   return (
     <main>
