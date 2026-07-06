@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { carregarProdutos } from "./api";
-import { BannerPromocional } from "./BannerPromocional";
-import { BarraBusca } from "./BarraBusca";
-import { FiltroPreco } from "./FiltroPreco";
-import { SeloFreteGratis } from "./SeloFreteGratis";
-import { CardProduto } from "./CardProduto";
-import { TagCategoria } from "./TagCategoria";
-import { Avaliacao } from "./Avaliacao";
-import { BadgeEstoque } from "./BadgeEstoque";
-import { BotaoAdicionarCarrinho } from "./BotaoAdicionarCarrinho";
+import { carregarProdutos } from "./hooks/api";
+import { BannerPromocional } from "./components/BannerPromocional";
+import { BarraBusca } from "./components/BarraBusca";
+import { FiltroPreco } from "./components/FiltroPreco";
+import { SeloFreteGratis } from "./components/SeloFreteGratis";
+import { CardProduto } from "./components/CardProduto";
+import { TagCategoria } from "./components/TagCategoria";
+import { Avaliacao } from "./components/Avaliacao";
+import { BadgeEstoque } from "./components/BadgeEstoque";
+import { BotaoAdicionarCarrinho } from "./components/BotaoAdicionarCarrinho";
 
 // HomePage — vitrine da loja: banner, busca, filtro e a grade de produtos.
 // Consome o JSON pela camada de dados (api.js) e monta um CardProduto por item.
